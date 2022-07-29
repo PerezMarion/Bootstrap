@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" 
+        crossorigin="anonymous">
+    <!-- recherche en ligne de bootstrap (comme au dessus) 
+    ou recherche en local avec un document ajouté dans le dossier vendor (comme en dessous) :
+    <link rel="stylesheet" href="./css/vendor/bootstrap.min.css"/> -->
+    <link rel="stylesheet" href=";/css/style.css"/>
+    <link rel="stylesheet" href="./css/pages/home.css"/> 
+    <!-- lien vers notre fichier de mise en page style.css commun à tout notre site puis lien vers le fichier de
+    mise en page home.css spécifique à cette page index.html
+    toujours placer le(s) lien(s) vers son propre code après celui de bootstrap pour surcharger le code
+    comme la lecture du code se fait de haut en bas : dans le fichier bootstrap il y a une mise en forme définie
+    pour une classe x et une classe y, puis dans notre propre fichier il y a une mise en forme pour la classe x
+    la mise en forme x qui arrive en deuxième (la notre) surchargera la première et sera appliquée tandis que'il n'y
+    pas de surcharge pour la classe y dont la mise en forme sera celle du fichier bootstrap -->
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <p>Chuchitio is the best coding bootcamp in San Francisco.We train teh est developer on:</p>
+      <ul>
+        <li>Typescript & OOP</li>
+        <li>React.js & Redux</li>
+        <li>Nest.js(Spring of the Typescript world)</li>
+      </ul>
+    <h2>Description of each topic</h2>
+    <div class="container"> <!-- conteneur (sous la forme d'un carré de 12 grilles de large)-->
+        <div class="row"> <!-- ligne -->
+            <!-- évolution :
+            <div class="col"> : colonne
+            <div class="col topic"> : colonne "topic" (classe présente dans le fichier bootstrap) 
+            <div class="col-lg-3 col-md-12 col-sm-6 col-xs-12 topic"> : colonne qui prendra
+                3  grilles (un quart de la longueur) pour les écrans large 
+                12 grilles (toute la longueur) pour les écrans médium
+                6  grilles (la moitié de la longueur) pour les écrans small
+                12 grilles (toute la longueur) pour les écrans extra small -->
+            <div class="col col-lg-3 col-md-12 col-sm-6 col-xs-12 topic ">
+                <h3>Typescript & OOP</h3>
+            </div> 
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 topic">
+                <h3>React.js & Redux</h3>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 topic">
+                <h3>Nest.js(Spring of the Typescript world)</h3>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 topic">
+                <h3>Action Script</h3>
+              </div>
+        </div>
+    </div>
+    <div>  
+    <h3>Schedule</h3>
+    <table class="table table-hover">
+    <!-- mise en forme "table" du fichier bootstrap + surbrillance des éléments survolés 
+    il existe beaucoup de classes différentes dans le fichier bootstrap, il ne faut pas les retinir
+    elles sont à retrouver dans la documentation : https://getbootstrap.com/ -->
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Hours</th>
+            <th>Topic</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td>9:00' - 17:00'</td>
+            <td>OOP Introduction</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>9:00' - 17:00'</td>
+            <td>Solid principles</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>9:00' - 17:00'</td>
+            <td>Solid principles</td>
+          </tr>
+          <tr>
+            <td>Thursday</td>
+            <td>9:00' - 17:00'</td>
+            <td>Design patterns</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>9:00' - 17:00'</td>
+            <td>Design patterns</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>To apply for the training clic <a href="./pages/register.html">here</a></p>
+</body>
+</html>
