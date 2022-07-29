@@ -1,0 +1,44 @@
+Génération d'un fichier package.json en tappant npm init -y dans le terminal
+Création d'un dossier node_modules avec plein de dépendances en tappant --save-dev node-sass
+
+Ajout de node_modules au fichier .gitignore car il ne faut pas versionner ce dossier
+
+Création d'un dossier vide : css
+Création d'un dossier : sass
+Création d'un fichier main.scss a ajouter dans le dossier sass
+
+Dans la console : npm run compile-sass
+
+Ainsi à chaque fois que l'on va ajouter du code dans main.scss il va être compilé : 
+    - la première fois cela va créer un fichier style.css dans le dossier css 
+    - ensuite le fichier style.css sera mis à jour en fonction des modifications de main.scss
+
+Ecrire en scss permet de faciliter la vie du codeur : l'écriture est plus facile
+Une fois qu'il a fini d'écrire son code "suplifié" en scss, il l'ajoute dans le fichier main.scss 
+Celui ci est compilé en language css "plus complexe" dans style.css automatiquement
+
+Avantages du language scss (entre autres) :
+    - Définition de variable : définir des variables de sorte que si vous décidez de changer une couleur, vous n’avez pas à la changer partout 
+      Vous pouvez simplement changer votre variable de couleur primaire en un seul endroit (à la définition de la variable) et tout est
+      Automatiquement modifié aux endroits où vous utilisé cette variable dans le code
+      $my-color: #333;                  
+      
+      .text { 
+        background-color:$my-color 
+      }
+
+    - Imbrication
+
+    - Mixins : au lieu de taper plusieurs fois une même suite d'instruction de mise en page, vous pouvez créer ce qui ressemble essentiellement
+      A une fonction et agit comme tel
+
+      @mixin my-font($style, $weight, $height) {
+        font-family: 'Jost', sans-serif;
+        font-style: $style;
+        font-weight: $weight;
+        line-height: $height;
+      } 
+
+      .element {
+        @include my-font(italic, 400, 1);
+      }
